@@ -1,0 +1,14 @@
+{
+  "name": "lang-stack-cli",
+  "type": "module",
+  "bin": {
+    "lang-stack": "index.js"
+  },
+  "scripts": {},
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "inquirer": "^12.7.0",
+    "yargs": "^18.0.0"
+  }
+}

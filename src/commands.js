@@ -8,6 +8,7 @@ yargs(hideBin(process.argv))
     'Start a learning session',
     () => {},
     async (argv) => {
+      console.clear();
       console.log('Starting a learning session');
       startLearning();
     }

@@ -5,10 +5,7 @@ export async function startLearning() {
   const words = await loadWords();
   let index = 0;
 
-  const success = await learnWord(words[index]);
-  if (success) {
-    await learnWord(words[index++]);
-  }
+  await learnWord(words[index]);
 }
 
 async function learnWord(word) {
@@ -19,6 +16,7 @@ async function learnWord(word) {
     console.log('Correct!');
     return true;
   } else {
+    console.clear();
     console.log('Fail, try again');
     learnWord(word);
   }

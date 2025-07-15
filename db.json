@@ -1,7 +1,7 @@
 {
   "words": [
-    { "id": 1, "prompt": "Hello", "answer": "Hallo" },
-    { "id": 2, "prompt": "Water", "answer": "Wasser" },
-    { "id": 3, "prompt": "Environment", "answer": "Umwelt" }
+    { "prompt": "Hello", "answer": "Hallo" },
+    { "prompt": "Water", "answer": "Wasser" },
+    { "prompt": "Environment", "answer": "Umwelt" }
   ]
 }

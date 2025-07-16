@@ -1,7 +1,7 @@
 {
   "words": [
-    { "prompt": "Hello", "answer": "Hallo" },
-    { "prompt": "Water", "answer": "Wasser" },
+    { "prompt": "Window", "answer": "Fenster" },
+    { "prompt": "Driving", "answer": "Fahren" },
     { "prompt": "Environment", "answer": "Umwelt" }
   ]
 }

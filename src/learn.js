@@ -7,39 +7,24 @@ export async function startLearning() {
   const amountOfWords = words.length;
   let index = 0;
 
-  while (index < amountOfWords - 1) {
+  while (index < amountOfWords) {
     const word = words[index];
     const card = new Card(word.prompt, word.answer);
 
-    const userAnswer = await input({ message: word.prompt });
-    const [success, hint] = card.try(userAnswer);
-    if (success) {
+    while (true) {
+      const userAnswer = await input({ message: word.prompt });
+      const [success, hint] = card.try(userAnswer);
+
       console.clear();
-      console.log('Correct!');
-      index++;
-      break;
-    } else {
-      console.clear();
-      console.log(`Hint: ${hint}`);
+      if (success) {
+        console.log('Correct!');
+        index++;
+        break;
+      } else {
+        console.log(`Hint: ${hint}`);
+      }
     }
   }
 
   return;
-}
-
-async function nextWord(word) {
-  const { prompt, answer } = word;
-  const card = new Card(prompt, answer);
-
-  const userAnswer = await input({ message: prompt });
-
-  if (userAnswer === answer) {
-    console.clear();
-    console.log('Correct!');
-    return true;
-  } else {
-    console.clear();
-    console.log('Fail, try again');
-    return false;
-  }
 }
